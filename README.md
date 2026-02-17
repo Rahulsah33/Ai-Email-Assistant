@@ -36,9 +36,3 @@ Before running this application, ensure you have:
 3. Pull a model: `ollama pull llama2`
 4. Start Ollama service
 
-## 🔧 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Rahulsah33/Ai-Email-Assistant.git
-   cd Ai-Email-Assistant
