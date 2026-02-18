@@ -1,38 +1,154 @@
-# AI Email Assistant
+📧 AI Email Assistant
 
-An intelligent email summarization tool built with Spring Boot and Spring AI that leverages the power of Ollama AI models to automatically analyze and summarize email content.
+An AI-powered Email Reply Generator built using Spring Boot + Spring AI + Ollama + React.
+This application generates professional, human-like email replies based on tone and input content.
 
-## 🚀 Features
+🚀 Features
 
-- **Email Summarization**: Automatically generates concise summaries of email content using AI
-- **Spring AI Integration**: Utilizes Spring AI framework with Ollama model for advanced natural language processing
-- **RESTful API**: Clean and simple REST endpoints for easy integration
-- **Reactive Support**: Built with Spring WebFlux for reactive programming capabilities
-- **Modern Java**: Leverages Java 21 features for optimal performance
+✨ Generate professional email replies
 
-## 🛠️ Technology Stack
+🎯 Tone customization (friendly, professional, formal, etc.)
 
-- **Java 21**: Latest LTS version of Java
-- **Spring Boot 4.0.2**: Modern Spring Boot framework
-- **Spring AI 2.0.0-M2**: AI integration framework
-- **Ollama**: Local AI model integration
-- **Maven**: Dependency management and build tool
-- **Lombok**: Reduces boilerplate code
-- **Spring WebFlux**: Reactive web framework
+🤖 Powered by local LLM using Ollama
 
-## 📋 Prerequisites
+⚡ REST API backend (Spring Boot)
 
-Before running this application, ensure you have:
+🎨 React frontend (MUI-based UI)
 
-- Java 21 or higher installed
-- Maven 3.6+ installed
-- Ollama installed and running locally
-- An Ollama model downloaded (e.g., llama2, mistral)
+🔄 Clean JSON response structure
 
-### Installing Ollama
+🛠 Tech Stack
+Backend
 
-1. Visit [Ollama's official website](https://ollama.ai)
-2. Download and install Ollama for your operating system
-3. Pull a model: `ollama pull llama2`
-4. Start Ollama service
+Java 17+
 
+Spring Boot
+
+Spring AI
+
+Ollama (Local LLM runtime)
+
+REST APIs
+
+Frontend
+
+React
+
+Material UI (MUI)
+
+Axios
+
+🧠 AI Model
+
+The project uses:
+
+Ollama
+
+Model: phi3:mini (Recommended for 8GB RAM systems)
+
+You can change the model inside:
+
+spring.ai.ollama.chat.options.model=phi3:mini
+
+📂 Project Structure
+Ai-Email-Assistant
+│
+├── backend/      # Spring Boot + Spring AI
+├── frontend/     # React + MUI
+└── README.md
+
+⚙️ Installation Guide
+1️⃣ Install Ollama
+
+Download and install Ollama from:
+https://ollama.com
+
+Start Ollama:
+
+ollama serve
+
+
+Install lightweight model:
+
+ollama pull phi3:mini
+
+2️⃣ Run Backend
+cd backend
+mvn spring-boot:run
+
+
+Backend runs at:
+
+http://localhost:8080
+
+3️⃣ Run Frontend
+cd frontend
+npm install
+npm run dev
+
+
+Frontend runs at:
+
+http://localhost:5173
+
+📬 API Endpoint
+Generate Email Reply
+
+POST
+
+http://localhost:8080/api/email/generate
+
+Request Body
+{
+  "emailContent": "Hi, we would like to schedule your interview tomorrow.",
+  "tone": "professional"
+}
+
+Response
+{
+  "reply": "Dear Sir/Madam, Thank you for reaching out..."
+}
+
+🏗 Architecture
+React Frontend
+        ↓
+Spring Boot Controller
+        ↓
+Spring AI Service
+        ↓
+Ollama (Local LLM)
+        ↓
+AI Generated Email
+
+💡 Why Local AI?
+
+No API costs
+
+Fully offline
+
+Privacy-friendly
+
+Good for learning AI integration
+
+🔮 Future Improvements
+
+Email subject generation
+
+Streaming AI responses
+
+Email history database
+
+Authentication system
+
+Cloud deployment
+
+Multi-language support
+
+👨‍💻 Author
+
+Rahul Kumar Sah
+Java Developer | Spring Boot | Backend Developer | AI Integration
+
+⭐ If You Like This Project
+
+Give it a star ⭐ on GitHub!
