@@ -77,19 +77,13 @@ cd backend
 mvn spring-boot:run
 
 
-Backend runs at:
 
-http://localhost:8080
 
 3️⃣ Run Frontend
 cd frontend
 npm install
 npm run dev
 
-
-Frontend runs at:
-
-http://localhost:5173
 
 📬 API Endpoint
 Generate Email Reply
